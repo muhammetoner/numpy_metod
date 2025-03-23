@@ -1,0 +1,264 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "547cd849-c0c2-4ad0-b269-6353b35fdd05",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "3f1b99c3-8a25-49b8-a0e8-d46b9406ec49",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1. np.full\n",
+      "[[7 7 7]\n",
+      " [7 7 7]\n",
+      " [7 7 7]] \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 1. np.full\n",
+    "\n",
+    "arr = np.full((3, 3), 7)  # 3x3'lük 7 ile dolu bir matris oluşturur\n",
+    "print(arr, \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "c8c1a7c5-6c8c-45cc-a8f0-792fca6b3dd6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2. np.eye\n",
+      "[[1. 0. 0.]\n",
+      " [0. 1. 0.]\n",
+      " [0. 0. 1.]] \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "# 2. np.eye - Birim matris oluşturma\n",
+    "\n",
+    "identity_matrix = np.eye(3)  # 3x3'lük birim matris\n",
+    "print(identity_matrix, \"\\n\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "d1825e97-97b2-4170-9b41-d944dcb7f324",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3. np.triu\n",
+      "[[3 1 1 8]\n",
+      " [0 9 9 2]\n",
+      " [0 0 1 1]\n",
+      " [0 0 0 5]] \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "# 3. np.triu - Üst üçgen matris oluşturma\n",
+    "\n",
+    "arr = np.random.randint(1, 10, (4, 4))\n",
+    "upper_triangle = np.triu(arr)\n",
+    "print(upper_triangle, \"\\n\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "a8963883-1004-4bea-8d49-4ad2c3f09283",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5. np.flip\n",
+      "[[4 3]\n",
+      " [2 1]] \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 5. np.flip - Diziyi ters çevirme\n",
+    "\n",
+    "arr = np.array([[1, 2], [3, 4]])\n",
+    "flipped = np.flip(arr)\n",
+    "print(flipped, \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "1c538386-bd42-4c4d-b6ea-dea2683b6318",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6. np.roll\n",
+      "[40 10 20 30] \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 6. np.roll - Elemanları kaydırma\n",
+    "print(\"6. elemen kaydırma\")\n",
+    "arr = np.array([10, 20, 30, 40])\n",
+    "rolled = np.roll(arr, 1)  # 1 birim sağa kaydırma\n",
+    "print(rolled, \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "345c3980-fa8d-46d3-a0ec-6d779dc602ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7. np.sqrt\n",
+      "[1. 2. 3. 4.] \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 7. np.sqrt - Karekök alma\n",
+    "print(\"7. np.sqrt\")\n",
+    "arr = np.array([1, 4, 9, 16])\n",
+    "print(np.sqrt(arr), \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "930cf919-80d1-46d0-beab-fa28f18b8801",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "8. np.power\n",
+      "[ 4  9 16] \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 8. np.power - Kuvvet alma\n",
+    "print(\"8. kuvvet alma\")\n",
+    "arr = np.array([2, 3, 4])\n",
+    "print(np.power(arr, 2), \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "3948d795-215f-4f17-a9c2-d6b3cfe6a75b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9. np.ptp\n",
+      "8 \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 9. np.ptp - En büyük ve en küçük değer arasındaki fark\n",
+    "print(\"en büyük en küçük fark \")\n",
+    "arr = np.array([3, 7, 2, 8, 10])\n",
+    "print(np.ptp(arr), \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "80e707ef-c729-48a7-8f36-fbc225656e96",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10. np.count_nonzero\n",
+      "3 \n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 10. np.count_nonzero - Sıfır olmayan elemanları sayma\n",
+    "print(\" kaçtane sıfır var\")\n",
+    "arr = np.array([[0, 1, 0], [3, 4, 0]])\n",
+    "print(np.count_nonzero(arr), \"\\n\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a8ac9532-b873-4e96-81a5-003530725185",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:python_b]",
+   "language": "python",
+   "name": "conda-env-python_b-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.21"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
